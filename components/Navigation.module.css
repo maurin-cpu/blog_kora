@@ -1,0 +1,124 @@
+.nav {
+  background: #f7f5f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(45, 59, 85, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.navContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1a3d2e;
+  letter-spacing: 1px;
+  font-family: 'Georgia', serif;
+  text-transform: lowercase;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navList li a {
+  color: #1a3d2e;
+  font-weight: 400;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  position: relative;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  padding: 0.25rem 0;
+}
+
+.navList li a:hover {
+  color: #2d3b55;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(45, 59, 85, 0.2);
+  border-radius: 4px;
+  z-index: 1000;
+  margin-top: 0.25rem;
+}
+
+.dropdownMenu li {
+  margin: 0;
+}
+
+.dropdownMenu li a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #1a3d2e;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.dropdownMenu li a:hover {
+  background: #f7f5f2;
+  color: #2d3b55;
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navList {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .searchForm {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+

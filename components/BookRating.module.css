@@ -1,0 +1,50 @@
+.ratingContainer {
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 2rem;
+}
+
+.ratingTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #b4975a;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.stars {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.starButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.starButton:hover {
+  transform: scale(1.1);
+}
+
+.star {
+  color: #e0e0e0;
+  transition: color 0.2s ease;
+}
+
+.starFilled {
+  color: #b4975a;
+}
+
+.ratingText {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+

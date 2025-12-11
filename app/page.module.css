@@ -1,0 +1,290 @@
+.container {
+  min-height: 100vh;
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+  background: #f7f5f2;
+  padding-top: 90px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem 2rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Image Section */
+.imageSection {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.authorsImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(25%) contrast(1.1);
+}
+
+.heroTitle {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #1a3d2e;
+  font-family: 'Georgia', serif;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.bookIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #1a3d2e;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: #1a3d2e;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  color: #1a3d2e;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* Section Styling */
+.section {
+  padding: 2rem 2rem 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #1a3d2e;
+  font-family: 'Georgia', serif;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.postCard {
+  background: #ffffff;
+  overflow: hidden;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+}
+
+.postCard:hover {
+  transform: translateY(-8px);
+  opacity: 0.95;
+  border-color: #2d3b55;
+}
+
+.postImage {
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(135deg, #2d3b55 0%, #006747 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+
+.postCard:hover .postImage {
+  background: linear-gradient(135deg, #b4975a 0%, #9e6b56 100%);
+}
+
+.postImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.03) 10px,
+    rgba(255, 255, 255, 0.03) 20px
+  );
+}
+
+.imagePlaceholder {
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: 'Georgia', serif;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.postContent {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.postTitle {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #2d3b55;
+  font-family: 'Georgia', serif;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.postCard:hover .postTitle {
+  color: #b4975a;
+}
+
+.postExcerpt {
+  color: #1a3d2e;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.postMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(45, 59, 85, 0.1);
+  font-size: 0.85rem;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.postDate {
+  font-weight: 400;
+}
+
+.postAuthor {
+  font-weight: 400;
+  color: #1a3d2e;
+}
+
+/* About Section */
+.aboutContent {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.aboutText {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #1a3d2e;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.ctaLink {
+  display: inline-block;
+  font-size: 1.125rem;
+  color: #2d3b55;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.25rem;
+}
+
+.ctaLink:hover {
+  color: #b4975a;
+  border-bottom-color: #2d3b55;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .imageContainer {
+    height: 350px;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .bookIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .postsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aboutText {
+    font-size: 1.125rem;
+  }
+}
+

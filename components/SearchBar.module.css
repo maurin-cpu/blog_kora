@@ -1,0 +1,52 @@
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(45, 59, 85, 0.2);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #1a3d2e;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #2d3b55;
+}
+
+.searchInput::placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.searchButton {
+  padding: 0.75rem 1rem;
+  background: #2d3b55;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.searchButton:hover {
+  background: #1e2838;
+}
+
+@media (max-width: 768px) {
+  .searchForm {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
+

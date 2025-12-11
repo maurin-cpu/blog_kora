@@ -1,0 +1,104 @@
+.container {
+  min-height: 100vh;
+  padding-top: 90px;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #607d8b;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.5px;
+}
+
+.main {
+  margin-bottom: 4rem;
+}
+
+.article {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 3rem;
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #1a3d2e;
+  font-family: 'Georgia', serif;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+.contactInfo {
+  margin-top: 2rem;
+}
+
+.contactInfo h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #607d8b;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.contactItem {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.contactItem:last-child {
+  border-bottom: none;
+}
+
+.contactItem strong {
+  display: block;
+  font-size: 1rem;
+  color: #607d8b;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contactItem p {
+  margin: 0;
+  color: #1a3d2e;
+}
+
+.note {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-left: 3px solid #00bcd4;
+  font-size: 0.95rem;
+  color: #1a3d2e;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .article {
+    padding: 2rem 1.5rem;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+}
+
