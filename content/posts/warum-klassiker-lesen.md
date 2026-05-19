@@ -1,5 +1,5 @@
 ---
-title: Deshalb Klassiker lesen?
+title: Warum Klassiker lesen?
 date: 2025-01-15
 author: Kora Schild
 excerpt: Eine Reflexion über den Wert klassischer Literatur und warum sie auch
