@@ -22,6 +22,9 @@ content:
       - name: body
         label: Inhalt
         type: rich-text
+        options:
+          format: markdown
+          switcher: true
 
   - name: home
     label: Startseite
