@@ -52,8 +52,11 @@ yarn dev
 │   ├── globals.css               # Globale Styles
 │   ├── layout.tsx                # Root Layout
 │   └── page.tsx                  # Startseite mit Blog-Übersicht
+├── content/
+│   └── posts/                    # Blog-Beiträge als Markdown (von Pages CMS verwaltet)
 ├── lib/
-│   └── posts.ts                  # Blog-Posts Daten und Funktionen
+│   └── posts.ts                  # Markdown-Loader (gray-matter + remark)
+├── .pages.yml                    # Pages-CMS-Konfiguration
 ├── next.config.js                # Next.js Konfiguration
 ├── package.json
 ├── tsconfig.json                 # TypeScript Konfiguration
@@ -62,18 +65,39 @@ yarn dev
 
 ## Blog-Posts hinzufügen
 
-Um neue Blog-Posts hinzuzufügen, bearbeiten Sie die `posts` Array in `lib/posts.ts`:
+Blog-Beiträge liegen als Markdown-Dateien im Ordner `content/posts/`. Jede Datei hat
+einen YAML-Frontmatter-Kopf und einen Markdown-Body. Der Dateiname ist der Slug der URL
+(`/blog/<dateiname-ohne-md>`).
 
-```typescript
-{
-  slug: 'mein-neuer-post',
-  title: 'Mein neuer Post',
-  excerpt: 'Eine kurze Beschreibung...',
-  content: '<p>Der vollständige Inhalt...</p>',
-  date: '2024-01-30',
-  author: 'Ihr Name',
-}
+```markdown
+---
+title: Mein neuer Post
+date: 2025-01-30
+author: Kora Schild
+excerpt: Eine kurze Beschreibung...
+---
+
+## Überschrift
+
+Der vollständige Inhalt als **Markdown**.
 ```
+
+### Pages CMS
+
+Das Projekt ist für [Pages CMS](https://pagescms.org/) vorkonfiguriert. Die Konfiguration
+liegt in `.pages.yml` im Repo-Root.
+
+So gehst du vor:
+
+1. Repository auf GitHub pushen.
+2. Auf [app.pagescms.org](https://app.pagescms.org/) mit GitHub einloggen und Zugriff
+   auf das Repo gewähren.
+3. Im Dashboard das Repo öffnen — die Sammlung „Blog-Beiträge" erscheint automatisch.
+4. Beiträge im Editor erstellen/bearbeiten — Pages CMS committet die Änderungen direkt
+   in den gewählten Branch.
+
+Nach jedem Commit muss die Seite neu gebaut werden (z. B. via Vercel-Deploy-Hook oder
+Next.js ISR), damit die Änderungen live gehen.
 
 ## Build für Produktion
 
