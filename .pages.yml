@@ -5,6 +5,7 @@ content:
     label: Blog-Beiträge
     type: collection
     path: content/posts
+    format: yaml-frontmatter
     fields:
       - name: title
         label: Titel
@@ -21,3 +22,25 @@ content:
       - name: body
         label: Inhalt
         type: rich-text
+
+  - name: home
+    label: Startseite
+    type: file
+    path: content/pages/home.md
+    format: yaml-frontmatter
+    fields:
+      - name: heroTitle
+        label: Hero-Titel
+        type: string
+      - name: heroSubtitle
+        label: Hero-Untertitel
+        type: string
+      - name: heroDescription
+        label: Hero-Beschreibung
+        type: text
+      - name: heroImage
+        label: Hero-Bild (URL)
+        type: string
+      - name: postsSectionTitle
+        label: Überschrift „Aktuelle Beiträge"
+        type: string

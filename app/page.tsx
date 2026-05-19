@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { getPosts } from '@/lib/posts'
+import { getHomePage } from '@/lib/pages'
 import styles from './page.module.css'
 
 export default async function Home() {
-  const posts = await getPosts()
+  const [posts, page] = await Promise.all([getPosts(), getHomePage()])
 
   return (
     <div className={styles.container}>
@@ -15,14 +16,13 @@ export default async function Home() {
             <path d="M4 19.5C4 18.837 4.263 18.201 4.732 17.732C5.201 17.263 5.837 17 6.5 17H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M6.5 2H20V20H6.5C5.837 20 5.201 19.737 4.732 19.268C4.263 18.799 4 18.163 4 17.5V4.5C4 3.837 4.263 3.201 4.732 2.732C5.201 2.263 5.837 2 6.5 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Klassiker lesen
+          {page.heroTitle}
         </h1>
         <p className={styles.heroSubtitle}>
-          Leseeindrücke mit wissenschaftlichem Fundament
+          {page.heroSubtitle}
         </p>
         <p className={styles.heroDescription}>
-          Ein Blog über klassische Literatur, der wissenschaftliche Analyse mit 
-          persönlicher Leidenschaft verbindet. Entdecken Sie zeitlose Werke neu.
+          {page.heroDescription}
         </p>
       </section>
 
@@ -30,7 +30,7 @@ export default async function Home() {
       <section className={styles.imageSection}>
         <div className={styles.imageContainer}>
           <Image
-            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&h=600&fit=crop&q=80"
+            src={page.heroImage}
             alt="Klassische Literatur und berühmte Autoren"
             width={1200}
             height={600}
@@ -43,7 +43,7 @@ export default async function Home() {
 
       {/* Aktuelle Beiträge Section */}
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Aktuelle Beiträge</h2>
+        <h2 className={styles.sectionTitle}>{page.postsSectionTitle}</h2>
         <div className={styles.postsGrid}>
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}>
