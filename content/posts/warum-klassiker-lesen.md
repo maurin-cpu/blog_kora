@@ -1,10 +1,10 @@
 ---
-title: Warum Klassiker lesen?
+title: Deshalb Klassiker lesen?
 date: 2025-01-15
 author: Kora Schild
-excerpt: Eine Reflexion über den Wert klassischer Literatur und warum sie auch heute noch relevant ist.
+excerpt: Eine Reflexion über den Wert klassischer Literatur und warum sie auch
+  heute noch relevant ist.
 ---
-
 ## Die Zeitlosigkeit der Klassiker
 
 Klassische Literatur hat etwas Zeitloses an sich. Sie überdauert Generationen und spricht zu Leserinnen und Lesern über Jahrhunderte hinweg. Doch was macht diese Werke so besonders?
