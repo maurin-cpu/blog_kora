@@ -19,6 +19,15 @@ export default function Footer() {
               <li><Link href="/kontakt">Kontakt</Link></li>
               <li><Link href="/impressum">Impressum</Link></li>
               <li><Link href="/datenschutz">Datenschutz</Link></li>
+              <li>
+                <a
+                  href="https://app.pagescms.org/maurin-cpu/blog_kora/main"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CMS-Login
+                </a>
+              </li>
             </ul>
           </div>
 

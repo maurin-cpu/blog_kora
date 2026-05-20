@@ -1,4 +1,7 @@
-media: public/uploads
+media:
+  input: public/uploads
+  output: /uploads
+  categories: [image]
 
 content:
   - name: posts
@@ -42,8 +45,9 @@ content:
         label: Hero-Beschreibung
         type: text
       - name: heroImage
-        label: Hero-Bild (URL)
-        type: string
+        label: Hero-Bild
+        type: image
+        description: Bild hochladen oder ein bereits hochgeladenes auswählen.
       - name: postsSectionTitle
         label: Überschrift „Aktuelle Beiträge"
         type: string
